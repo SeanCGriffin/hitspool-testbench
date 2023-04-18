@@ -8,7 +8,9 @@ INCDIR = inc
 SRCS := src/main.c\
 		src/ff_proxy.c\
 		src/printer.c\
-		src/wub_rx.c
+		src/wubase/rx.c\
+		src/wubase/packet.c\
+		src/hitspool/unit_tests.c
 
 OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
 DEPS := $(OBJS:.o=.d)

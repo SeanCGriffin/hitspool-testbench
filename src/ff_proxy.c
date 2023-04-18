@@ -109,8 +109,9 @@ FRESULT f_write(FIL **fp, void *buff, UINT btw, UINT *bw) {
 	if (fp == NULL) {
 		return FR_NOT_READY;
 	}
-
+	
 	*bw = fwrite(buff, 1, btw, *fp);
+	
 	if (*bw == btw)
 		return FR_OK;
 	else
