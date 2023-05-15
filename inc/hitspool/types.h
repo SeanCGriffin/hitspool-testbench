@@ -35,6 +35,9 @@ extern const char* HitspoolRCNameText[];
 extern const char* PLNameText[];
 extern const char* StreamerRCNameText[];
 
+//FIXME: As it stands, the hit formats defined below do not match what the wuBase is transmitting!
+//Some formatting work needs to be done to make these match.
+
 typedef struct HitPacket{
     u8 PMT : 8;
     u64 trecv : 48;
@@ -50,14 +53,14 @@ typedef struct HitHeader{
 
 typedef struct SPEHit{
     HitHeader header;
-    u8 subsample : 7;
-    u16 charge   : 12;
-    u8 padding   : 5;
+    u8 subsample     : 7;
+    u16 charge       : 12;
+    u8 padding       : 5;
 } __attribute__ ((__packed__)) SPEHit;
 
 typedef struct MPEHit{
     HitHeader header;
-    u16 nsamples : 16;
+    u16 nsamples     : 16;
     u16 waveform[];
 } __attribute__ ((__packed__)) MPEHit;
 
