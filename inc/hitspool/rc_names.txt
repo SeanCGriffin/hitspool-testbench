@@ -1,0 +1,10 @@
+/*
+ * hitspool_rc_names.txt
+ *
+ *  Created on: April 13, 2023
+ *      Author: sgriffin
+ */
+
+
+REGISTER_ENUM(HS_RC_OK)
+REGISTER_ENUM(HS_RC_NOTOK)

@@ -1,0 +1,12 @@
+/*
+ * streamer_rc_names.txt
+ *
+ *  Created on: Dec 7, 2021
+ *      Author: sgriffin
+ */
+
+
+REGISTER_ENUM(STREAMER_RC_OK)
+REGISTER_ENUM(STREAMER_RC_EOF)
+REGISTER_ENUM(STREAMER_RC_DISK_ERR)
+REGISTER_ENUM(STEAMER_RC_TYPE_ERR)
